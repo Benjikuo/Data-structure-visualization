@@ -1,29 +1,40 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Queue & Stack Visualizer</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Data Structure Visualization</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <h1>simple data structure</h1>
-  
-  <h2>Queue</h2>
-  <div id="queue-controls">
-    <button onclick="enqueue()">Enqueue</button>
-    <button onclick="dequeue()">Dequeue</button>
-  </div>
+    <header>
+        <h1>Data Structure Visualization</h1>
+        <p>Interactive animations built with p5.js</p>
+    </header>
 
-  <h2>Stack</h2>
-  <div id="stack-controls">
-    <button onclick="pushStack()">Push</button>
-    <button onclick="popStack()">Pop</button>
-  </div>
+    <main>
+        <div class="menu">
+            <a class="card" href="structure.html">
+                <h2>Basic Structures</h2>
+                <p>Stack · Queue · Array</p>
+            </a>
 
-  <div id="sketch-holder"></div>
+            <a class="card" href="search.html">
+                <h2>Searching</h2>
+                <p>Linear Search · Binary Search</p>
+            </a>
 
-  <script src="p5.min.js"></script>
-  <script src="sketch.js"></script>
+            <a class="card" href="sort.html">
+                <h2>Sorting</h2>
+                <p>Bubble · Quick · Merge</p>
+            </a>
+
+            <a class="card" href="tree.html">
+                <h2>Tree Structures</h2>
+                <p>BST · Heap · Traversals</p>
+            </a>
+        </div>
+    </main>
+
 </body>
 </html>

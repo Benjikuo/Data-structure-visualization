@@ -1,35 +1,21 @@
-Home
-│
-├── 1. Basic Data Structures
-│   ├── Array
-│   ├── Stack
-│   ├── Queue
-│   └── Linked List
-│
-├── 2. Searching Algorithms
-│   ├── Linear Search
-│   └── Binary Search
-│
-├── 3. Sorting Algorithms
-│   ├── Bubble
-│   ├── Selection
-│   ├── Insertion
-│   ├── Merge
-│   ├── Quick
-│   └── Heap (optional)
-│
-├── 4. Tree & Graph
-│   ├── Binary Tree
-│   ├── BST
-│   ├── Heap
-│   ├── Tree Traversal
-│   └── Graph (optional)
-│
-├── 5. Complexity (optional)
-│
-├── 6. Resources (optional)
-│
-└── 7. About
+/data-structure-visualization
+│── index.html        (主頁)
+│── /basic
+│      ├── stack.html
+│      ├── queue.html
+│      ├── array.html
+│── /searching
+│      ├── linear.html
+│      ├── binary.html
+│── /sorting
+│      ├── bubble.html
+│      ├── quick.html
+│── /tree
+│      ├── bst.html
+│      ├── heap.html
+│── /css
+│── /js
+│── /p5
 
 
 未來增加方向：
