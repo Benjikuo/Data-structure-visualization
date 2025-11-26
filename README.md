@@ -80,10 +80,6 @@ Data Structure/
 
 <br>
 
-## 💻 Keyboard and Mouse Controls
-
-<br>
-
 ## 📋 Page Overview
 
 <br>
