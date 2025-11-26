@@ -74,7 +74,7 @@ class Visualizer {
     calculateLayout() {
         if (this.steps.length > 0 && this.steps[0].array) {
             const dataSize = this.steps[0].array.length;
-            this.barWidth = Math.min(this.canvasWidth / dataSize, 80);
+            this.barWidth = Math.min(this.canvasWidth / dataSize, 55);
         }
     }
 
@@ -110,9 +110,10 @@ class Visualizer {
             const y = effectiveHeight - barHeight;
 
             let color = '#94a3b8'; 
-            if (step.compareIndices.includes(i)) color = '#fbbf24'; 
-            else if (step.swapIndices.includes(i)) color = '#ef4444'; 
-            else if (step.sortedIndices.includes(i)) color = '#22c55e'; 
+
+            if (step.compareIndices.includes(i)) color = '#fbbf24';
+            else if (step.swapIndices.includes(i)) color = '#ef4444';
+            else if (step.sortedIndices.includes(i)) color = '#22c55e';
 
             p.fill(color);
             p.noStroke();
@@ -128,8 +129,8 @@ class Visualizer {
 
         p.stroke('#cbd5e1');
         p.strokeWeight(2);
-        if (node.left) p.line(x, y, x - xOffset, y + 60);
-        if (node.right) p.line(x, y, x + xOffset, y + 60);
+        if (node.left) p.line(x, y, x - xOffset, y + 40);
+        if (node.right) p.line(x, y, x + xOffset, y + 40);
 
         let fillColor = 'white';
         let strokeColor = '#334155';
@@ -145,16 +146,16 @@ class Visualizer {
         p.fill(fillColor);
         p.stroke(strokeColor);
         p.strokeWeight(2);
-        p.ellipse(x, y, 40, 40);
+        p.ellipse(x, y, 25, 25);
 
         p.fill(textColor);
         p.noStroke();
         p.textAlign(p.CENTER, p.CENTER);
-        p.textSize(16);
+        p.textSize(12);
         p.text(node.value, x, y);
 
-        this.renderTree(p, node.left, step, x - xOffset, y + 60, level + 1);
-        this.renderTree(p, node.right, step, x + xOffset, y + 60, level + 1);
+        this.renderTree(p, node.left, step, x - xOffset, y + 40, level + 1);
+        this.renderTree(p, node.right, step, x + xOffset, y + 40, level + 1);
     }
     
     play() { this.isPlaying = true; }
@@ -182,7 +183,7 @@ class Visualizer {
         const event = new CustomEvent('viz-update', {
             detail: {
                 currentStep: this.currentStepIndex,
-                totalSteps: this.steps.length,
+                totalSteps: this.steps.length - 1,
                 description: this.steps[this.currentStepIndex]?.description || ""
             }
         });

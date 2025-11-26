@@ -9,7 +9,7 @@ class Stack {
 
        steps.push(new AnimationStep(
             array, 
-            [n],
+            [],
             [], 
             [], 
             `Ready to Push ${value}. Highlighting top slot.`
@@ -44,7 +44,7 @@ class Stack {
             return { steps, newArray: array };
         }
 
-        steps.push(new AnimationStep(array, [n - 1], [], [], `Prepare to Pop Top (Index ${n-1})`));
+        steps.push(new AnimationStep(array, [], [], [], `Prepare to Pop Top (Index ${n-1})`));
         steps.push(new AnimationStep(array, [], [n - 1], [], `Popping value ${array[n-1]}`));
 
         array.pop();

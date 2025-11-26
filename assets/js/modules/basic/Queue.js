@@ -9,7 +9,7 @@ class Queue {
 
         steps.push(new AnimationStep(
             array, 
-            [n], 
+            [], 
             [], 
             [], 
             `Ready to Enqueue ${value} at Tail`
@@ -43,7 +43,7 @@ class Queue {
             return { steps, newArray: array };
         }
 
-        steps.push(new AnimationStep(array, [0], [], [], `Checking Head (Value: ${array[0]})`));
+        steps.push(new AnimationStep(array, [], [], [], `Checking Head (Value: ${array[0]})`));
         steps.push(new AnimationStep(array, [], [0], [], `Dequeueing ${array[0]}...`));
 
         const removedVal = array.shift();

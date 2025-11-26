@@ -33,7 +33,7 @@
                     <div class="control-group">
                         <label>Value Input</label>
                         <div style="display: flex; gap: 0.5rem;">
-                            <input type="number" id="val-input" value="50" style="flex:1; padding: 0.5rem; border:1px solid #e2e8f0; border-radius: 6px;">
+                            <input type="number" id="val-input" value="50" style="width: 100%; padding: 0.4rem; border:1px solid #e2e8f0; border-radius: 6px;">
                             <button id="btn-rand" class="btn-control" style="flex:0.4;">🎲</button>
                         </div>
                     </div>
@@ -56,12 +56,17 @@
             <aside class="sidebar-right">
                 <div class="panel">
                     <h3>Status</h3>
-                    <p id="step-desc" style="min-height: 3em; color: var(--text-muted);">
+                    <p id="step-desc">
                         Ready. Select a structure and operate.
                     </p>
                     <div class="stats-row" style="margin-top: 1rem;">
                         <span class="stat-label">Size:</span>
                         <span class="stat-value" id="size-display">0</span>
+                    </div>
+
+                    <div class="legend">
+                        <div class="legend-item"><span class="color-box bg-green"></span> Add</div>
+                        <div class="legend-item"><span class="color-box bg-red"></span> Delete</div>
                     </div>
                 </div>
             </aside>

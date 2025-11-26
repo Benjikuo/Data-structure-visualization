@@ -35,7 +35,7 @@
                     <div class="control-group">
                         <label for="target-input">Target Value (to find)</label>
                         <div style="display: flex; gap: 0.5rem;">
-                            <input type="number" id="target-input" value="0" style="flex:1; padding: 0.5rem; border:1px solid var(--border-color); border-radius: 6px;">
+                            <input type="number" id="target-input" value="0" style="width: 100%; padding: 0.4rem; border:1px solid #e2e8f0; border-radius: 6px;">
                             <button id="btn-rand-target" class="btn-control" style="flex:0.4; font-size: 0.8rem;">🎲</button>
                         </div>
                     </div>
@@ -63,13 +63,13 @@
                         <span class="stat-label">Step:</span>
                         <span class="stat-value"><span id="step-count">0</span> / <span id="total-steps">0</span></span>
                     </div>
-                    <p id="step-desc" style="font-size: 0.9rem; min-height: 3em; color: var(--text-muted);">
+                    <p id="step-desc">
                         Ready to search.
                     </p>
 
                     <div class="legend">
-                        <div class="legend-item"><span class="color-box bg-compare"></span> Checking</div>
-                        <div class="legend-item"><span class="color-box bg-sorted"></span> Found!</div>
+                        <div class="legend-item"><span class="color-box bg-yellow"></span> Checking</div>
+                        <div class="legend-item"><span class="color-box bg-green"></span> Found</div>
                     </div>
                 </div>
 
