@@ -8,7 +8,7 @@ An interactive website for visualizing data structures and algorithms, built wit
 <br>
 
 ## 🛠️ Why I Built This
-- This is the group project for the Data Structure course. We choose this topic because it is the most relevant.
+- This is the group project for the **Data Structure course**. We choose this topic because it is the most relevant.
 - It is also a good opportunity to learn JS and practice using those data structures in algorithms.
 - I think after I finish this project, I will learn a lot. It will benefit me in future web projects.
 
