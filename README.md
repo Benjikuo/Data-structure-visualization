@@ -29,6 +29,8 @@ An interactive website for visualizing data structures and algorithms, built wit
 │     ├── css
 │     │    ├── style.css
 │     │    └── visualizer.css
+│     ├── image
+│     │    └── showcase.gif
 │     └── js
 │          ├── core
 │          │     ├── AnimationStep.js
