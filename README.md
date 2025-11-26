@@ -15,11 +15,12 @@ An interactive website for visualizing data structures and algorithms, built wit
 <br>
 
 ## 🧩 Features
-- 🔧 Interactive visuals that help simplify and clarify data structures and algorithms.
-- 📑 Modular architecture with four focused sections: Basic Structures, Searching, Sorting, and Trees.
-- 🕑 Real-time operations such as push/pop and enqueue/dequeue for hands-on learning.
-- 👟 Step-by-step algorithm animations that reveal how each process works internally.
-- ⬜ A clean, minimal interface designed to support intuitive, visualization-based learning.
+- 🔧 **Visualization** – Interactive visuals that help simplify and clarify data structures and algorithms.
+- 📑 **Structure** – Modular architecture with four focused sections: Basic Structures, Searching, Sorting, and Trees.
+- 🕑 **Interaction** – Real-time operations such as push/pop and enqueue/dequeue for hands-on learning.
+- 👟 **Animation** – Step-by-step algorithm animations that reveal how each process works internally.
+- ⬜ **Interface **– A clean, minimal UI designed to support intuitive, visualization-based learning.
+ 
 
 <br>
 
