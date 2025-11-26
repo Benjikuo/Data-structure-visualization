@@ -30,7 +30,7 @@ An interactive website for visualizing data structures and algorithms, built wit
 │     │    ├── style.css
 │     │    └── visualizer.css
 │     ├── image
-│     │    └── showcase.gif
+│     │    └── showcase.gif                   # Demonstration gif
 │     └── js
 │          ├── core
 │          │     ├── AnimationStep.js
@@ -50,15 +50,15 @@ An interactive website for visualizing data structures and algorithms, built wit
 │                │     └── BST.js
 │                └── utils
 │                      ├── helpers.js
-│                      └── p5.min.js            # p5.js library
+│                      └── p5.min.js          # p5.js library
 ├── pages
 │     ├── basic.html
 │     ├── searching.html
 │     ├── sorting.html
 │     └── tree.html
-├── index.html                                  # Main webpage
-├── LICENSE                                     # MIT license
-└── README.md                                   # Project documentation
+├── index.html                                # Main webpage
+├── LICENSE                                   # MIT license
+└── README.md                                 # Project documentation
 ```
 
 <br>
