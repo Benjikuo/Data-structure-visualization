@@ -26,49 +26,54 @@ An interactive website for visualizing data structures and algorithms, built wit
 
 ## 📂 Project Structure  
 ```
-assets
-├── css
-│   ├── style.css
-│   └── visualizer.css
-├── js
-│   ├── core
-│   │   ├── AnimationStep.js
-│   │   └── Visualizer.js
-│   └── modules
-│       ├── basic
-│       │   ├── Queue.js
-│       │   └── Stack.js
-│       ├── searching
-│       │   ├── BinarySearch.js
-│       │   └── LinearSearch.js
-│       ├── sorting
-│       │   ├── BubbleSort.js
-│       │   ├── MergeSort.js
-│       │   └── QuickSort.js
-│       ├── tree
-│       │   └── BST.js
-│       └── utils
-│           ├── helpers.js
-│           └── p5.min.js
+├── assets
+│     ├── css
+│     │    ├── style.css
+│     │    └── visualizer.css
+│     └── js
+│          ├── core
+│          │     ├── AnimationStep.js
+│          │     └── Visualizer.js
+│          └── modules
+│                ├── basic
+│                │     ├── Queue.js
+│                │     └── Stack.js
+│                ├── searching
+│                │     ├── BinarySearch.js
+│                │     └── LinearSearch.js
+│                ├── sorting
+│                │     ├── BubbleSort.js
+│                │     ├── MergeSort.js
+│                │     └── QuickSort.js
+│                ├── tree
+│                │     └── BST.js
+│                └── utils
+│                      ├── helpers.js
+│                      └── p5.min.js
 ├── pages
-│   ├── basic.html
-│   ├── searching.html
-│   ├── sorting.html
-│   ├── tree.html
-│   └── index.html
+│     ├── basic.html
+│     ├── searching.html
+│     ├── sorting.html
+│     ├── tree.html
+│     └── index.html
 ├── LICENSE
 └── README.md
 ```
 
 <br>
 
-## ▶️ How to Play
-1. Go to the website: [https://benjikuo.github.io/Data-structure-visualization/](https://benjikuo.github.io/Data-structure-visualization/)
-2. Try to interect with the data structure.
+## ▶️ How to Run
+**Visit the link** 
+- link: [https://benjikuo.github.io/Data-structure-visualization/](https://benjikuo.github.io/Data-structure-visualization/)
+
+**Or run locally**
+1. Download or clone the repository.  
+2. Doubble click to open index.html in any browser.
 
 <br>
 
 ## 📋 Page Overview
+- 
 
 <br>
 
