@@ -2,7 +2,7 @@
 An interactive website for visualizing data structures and algorithms, built with HTML, CSS, JavaScript, and p5.js.
 
 <p>
-  <img src="./image/showcase.gif" width="850">
+  <img src="./assets/image/showcase.gif" width="850">
 </p>
 
 <br>
