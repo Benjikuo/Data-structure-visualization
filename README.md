@@ -27,33 +27,33 @@ An interactive website for visualizing data structures and algorithms, built wit
 ## 📂 Project Structure  
 ```
 Data structure/
-├── assets
-│     ├── css
+├── assets/
+│     ├── css/
 │     │    ├── style.css
 │     │    └── visualizer.css
-│     ├── image
+│     ├── image/
 │     │    └── showcase.gif                  # Demonstration gif
-│     └── js
-│          ├── core
+│     └── js/
+│          ├── core/
 │          │     ├── AnimationStep.js
 │          │     └── Visualizer.js
-│          └── modules
-│                ├── basic
+│          └── modules/
+│                ├── basic/
 │                │     ├── Queue.js
 │                │     └── Stack.js
-│                ├── searching
+│                ├── searching/
 │                │     ├── BinarySearch.js
 │                │     └── LinearSearch.js
-│                ├── sorting
+│                ├── sorting/
 │                │     ├── BubbleSort.js
 │                │     ├── MergeSort.js
 │                │     └── QuickSort.js
-│                ├── tree
+│                ├── tree/
 │                │     └── BST.js
-│                └── utils
+│                └── utils/
 │                      ├── helpers.js
 │                      └── p5.min.js          # p5.js library
-├── pages
+├── pages/
 │     ├── basic.html
 │     ├── searching.html
 │     ├── sorting.html
