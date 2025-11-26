@@ -15,11 +15,11 @@ An interactive website for visualizing data structures and algorithms, built wit
 <br>
 
 ## 🧩 Features
-- 🚀 Interactive Visualizations – Dynamic and intuitive demonstrations of data structures and algorithms built with p5.js.
-- 📂 Modular Architecture – Organized into four main sections: Basic Structures, Searching, Sorting, and Trees, ensuring clear separation of concepts.
-- ✋ Hands-On Operations – Users can directly perform actions such as push/pop or enqueue/dequeue to observe structural changes in real time.
-- 🎞️ Step-By-Step Algorithm Animations – Searching and sorting algorithms are visualized frame-by-frame to reveal internal processes.
-- 🧼 Clean and Minimal Interface – A simple and accessible UI design allows each topic to be explored independently with minimal distraction.
+- 🔧 Interactive visualizations that make data structures and algorithms easier to understand through clear graphical representations.
+- 📑 Modular architecture with four focused sections: Basic Structures, Searching, Sorting, and Trees.
+- 🕑 Real-time operations such as push/pop and enqueue/dequeue for hands-on learning.
+- 👟 Step-by-step algorithm animations that reveal how each process works internally.
+- ⬜ A clean, minimal interface designed to support intuitive, visualization-based learning.
 
 <br>
 
@@ -48,15 +48,15 @@ An interactive website for visualizing data structures and algorithms, built wit
 │                │     └── BST.js
 │                └── utils
 │                      ├── helpers.js
-│                      └── p5.min.js
+│                      └── p5.min.js            # p5.js library
 ├── pages
 │     ├── basic.html
 │     ├── searching.html
 │     ├── sorting.html
-│     ├── tree.html
-│     └── index.html
-├── LICENSE
-└── README.md
+│     └── tree.html
+├── index.html                                  # Main webpage
+├── LICENSE                                     # MIT license
+└── README.md                                   # Project documentation
 ```
 
 <br>
@@ -85,4 +85,4 @@ An interactive website for visualizing data structures and algorithms, built wit
 This project is released under the MIT License.  
 You are free to use, modify, and share it for learning or personal projects.  
 
-**This is the sentence which will be added after I finished the project.**
+**It was hard, but completing it made the concepts much clearer for me.**
