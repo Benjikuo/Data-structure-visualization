@@ -15,7 +15,7 @@ An interactive website for visualizing data structures and algorithms, built wit
 <br>
 
 ## 🧩 Features
-- 🔧 Interactive visualizations that make data structures and algorithms easier to understand through clear graphical representations.
+- 🔧 Interactive visuals that help simplify and clarify data structures and algorithms.
 - 📑 Modular architecture with four focused sections: Basic Structures, Searching, Sorting, and Trees.
 - 🕑 Real-time operations such as push/pop and enqueue/dequeue for hands-on learning.
 - 👟 Step-by-step algorithm animations that reveal how each process works internally.
