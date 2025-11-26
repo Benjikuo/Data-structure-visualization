@@ -15,12 +15,11 @@ An interactive website for visualizing data structures and algorithms, built wit
 <br>
 
 ## 🧩 Features
-- Interactive Visualizations – Each data structure and algorithm is demonstrated with clear, animated graphics using p5.js.
-- Modular Pages – The website is organized into four main categories: basic structures, searching, sorting, and trees.
-- Hands-On Demonstrations – Users can interact with operations such as enqueue/dequeue, push/pop, or watch step-by-step sorting animations.
-- Algorithm Step Animation – Sorting and searching algorithms display each step in motion to show what happens behind the scenes.
-- Clean and Simple UI – Designed with separate pages and clear navigation, making each concept easy to explore independently.
-- GitHub Pages Deployment – Fully accessible online with no installation required.
+- 🚀 Interactive Visualizations – Dynamic and intuitive demonstrations of data structures and algorithms built with p5.js.
+- 📂 Modular Architecture – Organized into four main sections: Basic Structures, Searching, Sorting, and Trees, ensuring clear separation of concepts.
+- ✋ Hands-On Operations – Users can directly perform actions such as push/pop or enqueue/dequeue to observe structural changes in real time.
+- 🎞️ Step-By-Step Algorithm Animations – Searching and sorting algorithms are visualized frame-by-frame to reveal internal processes.
+- 🧼 Clean and Minimal Interface – A simple and accessible UI design allows each topic to be explored independently with minimal distraction.
 
 <br>
 
@@ -63,17 +62,22 @@ An interactive website for visualizing data structures and algorithms, built wit
 <br>
 
 ## ▶️ How to Run
-**Visit the link** 
+#### Online Version 
+ 
 - link: [https://benjikuo.github.io/Data-structure-visualization/](https://benjikuo.github.io/Data-structure-visualization/)
 
-**Or run locally**
+#### Run Locally
 1. Download or clone the repository.  
-2. Doubble click to open index.html in any browser.
+2. Double-click `index.html` to open it in your default browser.
 
 <br>
 
 ## 📋 Page Overview
-- 
+**Index** (main navigation hub)  
+├── **Basic Structures** (Stack · Queue)    
+├── **Searching** (Linear · Binary)   
+├── **Sorting** (Bubble · Quick · Merge)  
+└── **Tree Structures** (BST)  
 
 <br>
 
