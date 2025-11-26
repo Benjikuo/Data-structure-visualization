@@ -26,50 +26,38 @@ An interactive website for visualizing data structures and algorithms, built wit
 
 ## 📂 Project Structure  
 ```
-Data Structure/
-│
-├── index.html                 # Homepage with four main categories
-│
-├── basic/                     # Basic data structures
-│   ├── index.html
-│   ├── array.html
-│   ├── stack.html
-│   ├── queue.html
-│   └── linkedlist.html
-│
-├── searching/                 # Searching algorithms
-│   ├── index.html
-│   ├── linear.html
-│   ├── binary.html
-│   ├── jump.html
-│   ├── interpolation.html
-│   └── exponential.html
-│
-├── sorting/                   # Sorting algorithms
-│   ├── index.html
-│   ├── bubble.html
-│   ├── selection.html
-│   ├── insertion.html
-│   ├── merge.html
-│   ├── quick.html
-│   └── heap.html
-│
-├── tree/                      # Tree & graph structures
-│   ├── index.html
-│   ├── binary.html
-│   ├── bst.html
-│   ├── heap.html
-│   └── traversal.html
-│
-├── css/                       # Shared CSS files
-│   └── style.css
-│
-├── js/                        # Shared JavaScript files
-│   ├── p5.min.js
-│   └── common.js
-│
-└── image/                     # Images, GIFs, and showcases
-    └── showcase.gif
+assets
+├── css
+│   ├── style.css
+│   └── visualizer.css
+├── js
+│   ├── core
+│   │   ├── AnimationStep.js
+│   │   └── Visualizer.js
+│   └── modules
+│       ├── basic
+│       │   ├── Queue.js
+│       │   └── Stack.js
+│       ├── searching
+│       │   ├── BinarySearch.js
+│       │   └── LinearSearch.js
+│       ├── sorting
+│       │   ├── BubbleSort.js
+│       │   ├── MergeSort.js
+│       │   └── QuickSort.js
+│       ├── tree
+│       │   └── BST.js
+│       └── utils
+│           ├── helpers.js
+│           └── p5.min.js
+├── pages
+│   ├── basic.html
+│   ├── searching.html
+│   ├── sorting.html
+│   ├── tree.html
+│   └── index.html
+├── LICENSE
+└── README.md
 ```
 
 <br>
