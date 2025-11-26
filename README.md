@@ -30,7 +30,7 @@ An interactive website for visualizing data structures and algorithms, built wit
 │     │    ├── style.css
 │     │    └── visualizer.css
 │     ├── image
-│     │    └── showcase.gif                   # Demonstration gif
+│     │    └── showcase.gif                  # Demonstration gif
 │     └── js
 │          ├── core
 │          │     ├── AnimationStep.js
