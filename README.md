@@ -26,6 +26,7 @@ An interactive website for visualizing data structures and algorithms, built wit
 
 ## 📂 Project Structure  
 ```
+Data structure
 ├── assets
 │     ├── css
 │     │    ├── style.css
