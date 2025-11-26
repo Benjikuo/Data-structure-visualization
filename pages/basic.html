@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Structures - Atlas</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/visualizer.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Basic Structures</h1>
+            <p><a href="../index.html" style="color: #94a3b8; text-decoration: underline;">Home</a> / Stack & Queue</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="viz-layout">
+            <aside class="sidebar-left">
+                <div class="panel">
+                    <h3>Data Structure</h3>
+                    <div class="control-group">
+                        <select id="structure-select">
+                            <option value="stack">Stack (LIFO)</option>
+                            <option value="queue">Queue (FIFO)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3>Operations</h3>
+                    
+                    <div class="control-group">
+                        <label>Value Input</label>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <input type="number" id="val-input" value="50" style="flex:1; padding: 0.5rem; border:1px solid #e2e8f0; border-radius: 6px;">
+                            <button id="btn-rand" class="btn-control" style="flex:0.4;">🎲</button>
+                        </div>
+                    </div>
+
+                    <div class="button-row" style="margin-top: 1rem;">
+                        <button id="btn-add" class="btn-control btn-primary">Push</button>
+                        <button id="btn-remove" class="btn-control">Pop</button>
+                    </div>
+                    
+                    <div class="button-row">
+                         <button id="btn-clear" class="btn-control" style="background: #fee2e2; border-color: #fecaca; color: #ef4444;">Clear All</button>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="canvas-wrapper" id="canvas-container">
+                <div id="viz-canvas" style="width: 100%; height: 100%;"></div>
+            </div>
+
+            <aside class="sidebar-right">
+                <div class="panel">
+                    <h3>Status</h3>
+                    <p id="step-desc" style="min-height: 3em; color: var(--text-muted);">
+                        Ready. Select a structure and operate.
+                    </p>
+                    <div class="stats-row" style="margin-top: 1rem;">
+                        <span class="stat-label">Size:</span>
+                        <span class="stat-value" id="size-display">0</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>Project Atlas · <a href="https://github.com/benjikuo/Data-structure-visualization" target="_blank">View on GitHub</a></p>
+    </footer>
+
+    <script src="../assets/js/p5.min.js"></script>
+    <script src="../assets/js/utils/helpers.js"></script>
+    <script src="../assets/js/core/AnimationStep.js"></script>
+    <script src="../assets/js/core/Visualizer.js"></script>
+    <script src="../assets/js/modules/basic/Stack.js"></script>
+    <script src="../assets/js/modules/basic/Queue.js"></script>
+
+    <script>
+        let viz;
+        let currentData = [20, 45, 60, 30];
+
+        const elements = {
+            select: document.getElementById('structure-select'),
+            input: document.getElementById('val-input'),
+            btnAdd: document.getElementById('btn-add'),
+            btnRemove: document.getElementById('btn-remove'),
+            btnClear: document.getElementById('btn-clear'),
+            btnRand: document.getElementById('btn-rand'),
+            desc: document.getElementById('step-desc'),
+            size: document.getElementById('size-display'),
+        };
+
+        window.onload = () => {
+            setTimeout(() => {
+                initApp();
+            }, 100);
+        };
+
+        function initApp() {
+            viz = new Visualizer('viz-canvas');
+
+            elements.select.onchange = updateBtnLabels;
+            elements.btnAdd.onclick = onAddClick;
+            elements.btnRemove.onclick = onRemoveClick;
+            elements.btnClear.onclick = onClearClick;
+            
+            elements.btnRand.onclick = () => {
+                elements.input.value = Math.floor(Math.random() * 90) + 10;
+            };
+
+            updateBtnLabels();
+            updateVizInstant();
+        }
+
+        function updateBtnLabels() {
+            const mode = elements.select.value;
+            if (mode === 'stack') {
+                elements.btnAdd.innerText = "Push";
+                elements.btnRemove.innerText = "Pop";
+            } else {
+                elements.btnAdd.innerText = "Enqueue";
+                elements.btnRemove.innerText = "Dequeue";
+            }
+        }
+
+        function onAddClick() {
+            const val = parseInt(elements.input.value);
+            if (isNaN(val)) return;
+
+            const mode = elements.select.value;
+            let result;
+
+            if (mode === 'stack') {
+                if (typeof Stack !== 'undefined') {
+                    result = Stack.generatePushSteps(currentData, val);
+                }
+            } else {
+                if (typeof Queue !== 'undefined') {
+                    result = Queue.generateEnqueueSteps(currentData, val);
+                }
+            }
+
+            if (result) connectAndPlay(result);
+        }
+
+        function onRemoveClick() {
+            const mode = elements.select.value;
+            let result;
+
+            if (mode === 'stack') {
+                 if (typeof Stack !== 'undefined') {
+                    result = Stack.generatePopSteps(currentData);
+                 }
+            } else {
+                 if (typeof Queue !== 'undefined') {
+                    result = Queue.generateDequeueSteps(currentData);
+                 }
+            }
+
+            if (result) connectAndPlay(result);
+        }
+
+        function onClearClick() {
+            currentData = [];
+            updateVizInstant();
+            elements.desc.innerText = "Cleared all elements.";
+        }
+
+        function connectAndPlay(result) {
+            viz.steps = result.steps;
+            viz.currentStepIndex = 0;
+            currentData = result.newArray;
+            viz.calculateLayout();
+            viz.play();
+            elements.size.innerText = currentData.length;
+            elements.input.value = Math.floor(Math.random() * 90) + 10;
+        }
+
+        function updateVizInstant() {
+            const step = new AnimationStep(currentData, [], [], [], "Ready");
+            viz.steps = [step];
+            viz.currentStepIndex = 0;
+            viz.calculateLayout();
+            elements.size.innerText = currentData.length;
+        }
+
+        document.addEventListener('viz-update', (e) => {
+            elements.desc.innerText = e.detail.description;
+        });
+    </script>
+</body>
+</html>

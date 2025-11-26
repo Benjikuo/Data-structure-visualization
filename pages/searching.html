@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching Algorithms - Atlas</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/visualizer.css">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Searching Algorithms</h1>
+            <p><a href="../index.html" style="color: #94a3b8; text-decoration: underline;">Home</a> / Searching</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="viz-layout">
+            <aside class="sidebar-left">
+                <div class="panel">
+                    <h3>Configuration</h3>
+                    
+                    <div class="control-group">
+                        <label for="algo-select">Algorithm</label>
+                        <select id="algo-select">
+                            <option value="linear">Linear Search</option>
+                            <option value="binary">Binary Search</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="target-input">Target Value (to find)</label>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <input type="number" id="target-input" value="0" style="flex:1; padding: 0.5rem; border:1px solid var(--border-color); border-radius: 6px;">
+                            <button id="btn-rand-target" class="btn-control" style="flex:0.4; font-size: 0.8rem;">🎲</button>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="data-size">Data Size (<span id="size-val">20</span>)</label>
+                        <input type="range" id="data-size" min="10" max="50" value="20">
+                    </div>
+
+                    <div class="control-group">
+                        <label for="speed-slider">Speed</label>
+                        <input type="range" id="speed-slider" min="1" max="100" value="50">
+                    </div>
+                </div>
+            </aside>
+
+            <div class="canvas-wrapper" id="canvas-container">
+                <div id="viz-canvas"></div>
+            </div>
+
+            <aside class="sidebar-left">
+                <div class="panel">
+                    <h3>Status</h3>
+                    <div class="stats-row">
+                        <span class="stat-label">Step:</span>
+                        <span class="stat-value"><span id="step-count">0</span> / <span id="total-steps">0</span></span>
+                    </div>
+                    <p id="step-desc" style="font-size: 0.9rem; min-height: 3em; color: var(--text-muted);">
+                        Ready to search.
+                    </p>
+
+                    <div class="legend">
+                        <div class="legend-item"><span class="color-box bg-compare"></span> Checking</div>
+                        <div class="legend-item"><span class="color-box bg-sorted"></span> Found!</div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3>Controls</h3>
+                    <div class="button-row">
+                        <button id="btn-play" class="btn-control btn-primary">Play</button>
+                        <button id="btn-pause" class="btn-control">Pause</button>
+                        <button id="btn-reset" class="btn-control">Reset</button>
+                    </div>
+                    <div class="button-row">
+                        <button id="btn-prev" class="btn-control">← Step</button>
+                        <button id="btn-next" class="btn-control">Step →</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>Project Atlas · <a href="https://github.com/benjikuo/Data-structure-visualization" target="_blank">View on GitHub</a></p>
+    </footer>
+
+    <script src="../assets/js/p5.min.js"></script>
+
+    <script src="../assets/js/utils/helpers.js"></script>
+    <script src="../assets/js/core/AnimationStep.js"></script>
+    <script src="../assets/js/core/Visualizer.js"></script>
+
+    <script src="../assets/js/modules/searching/LinearSearch.js"></script>
+    <script src="../assets/js/modules/searching/BinarySearch.js"></script>
+
+    <script>
+        let viz;
+        let currentData = [];
+
+        const elAlgoSelect = document.getElementById('algo-select');
+        const elDataSize = document.getElementById('data-size');
+        const elSpeed = document.getElementById('speed-slider');
+        const elSizeVal = document.getElementById('size-val');
+        const elTarget = document.getElementById('target-input');
+        
+        const elStepDesc = document.getElementById('step-desc');
+        const elStepCount = document.getElementById('step-count');
+        const elTotalSteps = document.getElementById('total-steps');
+
+        window.onload = () => {
+            viz = new Visualizer('viz-canvas');
+
+            document.getElementById('btn-play').onclick = () => viz.play();
+            document.getElementById('btn-pause').onclick = () => viz.pause();
+            document.getElementById('btn-prev').onclick = () => viz.stepBackward();
+            document.getElementById('btn-next').onclick = () => viz.stepForward();
+            
+            document.getElementById('btn-reset').onclick = () => {
+                initScenario();
+            };
+
+            document.getElementById('btn-rand-target').onclick = () => {
+                pickRandomTarget();
+                runAlgorithm();
+            };
+
+            elAlgoSelect.onchange = runAlgorithm;
+            
+            elDataSize.oninput = (e) => {
+                elSizeVal.innerText = e.target.value;
+                initScenario();
+            };
+
+            elSpeed.oninput = (e) => viz.setSpeed(parseInt(e.target.value));
+            
+            elTarget.onchange = runAlgorithm;
+
+            document.addEventListener('viz-update', (e) => {
+                const { currentStep, totalSteps, description } = e.detail;
+                elStepCount.innerText = currentStep;
+                elTotalSteps.innerText = totalSteps;
+                elStepDesc.innerText = description;
+            });
+
+            initScenario();
+        };
+
+        function initScenario() {
+            const size = parseInt(elDataSize.value);
+            currentData = Utils.generateRandomArray(size, 10, 100);
+            pickRandomTarget();
+            runAlgorithm();
+        }
+
+        function pickRandomTarget() {
+            if (currentData.length > 0) {
+                const randIndex = Math.floor(Math.random() * currentData.length);
+                elTarget.value = currentData[randIndex];
+            }
+        }
+
+        function runAlgorithm() {
+            const algoKey = elAlgoSelect.value;
+            const targetVal = parseInt(elTarget.value);
+            let algorithm;
+
+            switch(algoKey) {
+                case 'linear':
+                    algorithm = new LinearSearch(targetVal);
+                    break;
+                case 'binary':
+                    algorithm = new BinarySearch(targetVal);
+                    break;
+                default:
+                    return;
+            }
+
+            viz.loadAlgorithm(algorithm, currentData);
+            
+            elStepDesc.innerText = `Searching for ${targetVal}... Press Play.`;
+            viz.setSpeed(parseInt(elSpeed.value));
+        }
+    </script>
+</body>
+</html>

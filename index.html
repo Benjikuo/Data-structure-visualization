@@ -2,39 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Structure Visualization</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Data Structure Visualization</h1>
-        <p>Interactive animations built with p5.js</p>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Data Structure Visualization</h1>
+            <p>Interactive animations powered by p5.js</p>
+        </div>
     </header>
 
     <main>
-        <div class="menu">
-            <a class="card" href="structure.html">
-                <h2>Basic Structures</h2>
-                <p>Stack · Queue · Array</p>
-            </a>
+        <div class="container">
+            <div class="grid-menu">
+                
+                <a class="card" href="pages/basic.html">
+                    <div class="card-icon">📚</div>
+                    <h2>Basic Structures</h2>
+                    <p>Stack · Queue · Array · Linked List</p>
+                </a>
 
-            <a class="card" href="search.html">
-                <h2>Searching</h2>
-                <p>Linear Search · Binary Search</p>
-            </a>
+                <a class="card" href="pages/searching.html">
+                    <div class="card-icon">🔍</div>
+                    <h2>Searching</h2>
+                    <p>Linear · Binary · Interpolation</p>
+                </a>
 
-            <a class="card" href="sort.html">
-                <h2>Sorting</h2>
-                <p>Bubble · Quick · Merge</p>
-            </a>
+                <a class="card" href="pages/sorting.html">
+                    <div class="card-icon">📊</div>
+                    <h2>Sorting</h2>
+                    <p>Bubble · Quick · Merge · Heap</p>
+                </a>
 
-            <a class="card" href="tree.html">
-                <h2>Tree Structures</h2>
-                <p>BST · Heap · Traversals</p>
-            </a>
+                <a class="card" href="pages/tree.html">
+                    <div class="card-icon">🌲</div>
+                    <h2>Tree Structures</h2>
+                    <p>BST · Heap · Traversals</p>
+                </a>
+
+            </div>
         </div>
     </main>
+
+    <footer>
+        <p>Project Atlas · <a href="https://github.com/benjikuo/Data-structure-visualization" target="_blank">View on GitHub</a></p>
+    </footer>
 
 </body>
 </html>
