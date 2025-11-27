@@ -219,10 +219,6 @@ input[type=range]::-webkit-slider-thumb:hover {
         font-size: 0.9rem;
     }
 
-    .button-row {
-        flex-wrap: wrap;
-    }
-
     .button-row .btn-control {
         flex: 1 1 calc(50% - 0.4rem);
     }
