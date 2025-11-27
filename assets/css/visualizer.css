@@ -198,22 +198,4 @@ input[type=range]::-webkit-slider-thumb:hover {
 .bg-red { background-color: #ef4444; }
 .bg-green { background-color: #22c55e; }
 
-@media (max-width: 900px) {
-    .viz-layout {
-        grid-template-columns: 1fr;
-    }
-    
-    .sidebar {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    
-    .panel {
-        flex: 1;
-        min-width: 200px;
-    }
-    
-    .canvas-wrapper {
-        min-height: 200px;
-    }
-}
+
