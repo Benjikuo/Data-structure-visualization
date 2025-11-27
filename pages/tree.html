@@ -118,10 +118,11 @@
             };
 
             document.getElementById('btn-insert').onclick = () => {
-                const randomVal = Math.floor(Math.random() * 99) + 1;
-                elInput.value = randomVal;
-                const steps = bst.insert(randomVal);
+                const val = parseInt(elInput.value);
+                if (isNaN(val)) return;
+                const steps = bst.insert(val);
                 playAnimation(steps);
+                elInput.value = Math.floor(Math.random() * 99) + 1;
             };
 
             document.getElementById('btn-search').onclick = () => {

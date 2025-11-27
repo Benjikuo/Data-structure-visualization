@@ -150,7 +150,10 @@
                 }
             }
 
-            if (result) connectAndPlay(result);
+            if (result) {
+                connectAndPlay(result);
+                elements.input.value = Math.floor(Math.random() * 90) + 10;
+            }
         }
 
         function onRemoveClick() {
@@ -183,7 +186,6 @@
             viz.calculateLayout();
             viz.play();
             elements.size.innerText = currentData.length;
-            elements.input.value = Math.floor(Math.random() * 90) + 10;
         }
 
         function updateVizInstant() {
