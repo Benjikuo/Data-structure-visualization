@@ -66,15 +66,16 @@ a {
     padding: 0 1rem;
     width: 100%;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .grid-menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    margin-top: 80px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 30px;
 }
 
 .card {
@@ -161,7 +162,7 @@ footer a:hover {
     background-color: var(--primary-hover);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 505px) {
     .hero {
         height: auto;
         padding: 2rem 1rem;
@@ -170,12 +171,10 @@ footer a:hover {
     .hero h1 {
         font-size: 1.3rem;
     }
-    
-    .container {
-        padding: 0 1rem;
-    }
 
     .grid-menu {
         grid-template-columns: 1fr;
+        margin-top: 5px;
+        margin-bottom: 35px;
     }
 }
