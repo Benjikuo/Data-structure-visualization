@@ -1,7 +1,7 @@
 # Data-structure-visualization
 An interactive website for visualizing data structures and algorithms, built with HTML, CSS, JavaScript, and p5.js.  
 
-I also include PPT about this project
+I also include PPT about this project  
 Check it out here 👉🏻 [Data Structure Visualization.pptx](https://github.com/Benjikuo/Data-structure-visualization/blob/main/Data%20Structure%20Visualization.pptx)
 <p>
   <img src="./assets/image/showcase.gif" width="784">
