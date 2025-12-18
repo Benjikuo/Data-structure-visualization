@@ -88,7 +88,7 @@ Data structure/
 <br>
 
 ## 📜 License
-This project is released under the MIT License.  
+Released under the **MIT License**.  
 You are free to use, modify, and share it for learning or personal projects.  
 
 **It was hard, but completing it made the concepts much clearer for me.**
