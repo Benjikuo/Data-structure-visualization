@@ -66,6 +66,7 @@ Data structure/
 │     └── index.html
 ├── tree/
 │     └── index.html
+├── Data Structure Visualization.pptx         # Visualization slides
 ├── favicon.ico                               # Website favicon
 ├── index.html                                # Main webpage
 ├── LICENSE                                   # MIT license
