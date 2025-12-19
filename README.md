@@ -56,11 +56,14 @@ Data structure/
 │                └── utils/
 │                      ├── helpers.js
 │                      └── p5.min.js          # p5.js library
-├── pages/
-│     ├── basic.html
-│     ├── searching.html
-│     ├── sorting.html
-│     └── tree.html
+├── basic/
+│     └── index.html  
+├── searching/
+│     └── index.html  
+├── sorting/
+│     └── index.html  
+├── tree/
+│     └── index.html  
 ├── index.html                                # Main webpage
 ├── LICENSE                                   # MIT license
 └── README.md                                 # Project documentation
