@@ -1,7 +1,9 @@
 # Data-structure-visualization
 An interactive website for visualizing data structures and algorithms, built with HTML, CSS, JavaScript, and p5.js.  
 
-Visit the website 👉🏻 [https://benjikuo.github.io/Data-structure-visualization/](https://benjikuo.github.io/Data-structure-visualization/)  
+Visit the website 👇🏻  
+[https://benjikuo.github.io/Data-structure-visualization/](https://benjikuo.github.io/Data-structure-visualization/)  
+
 I also include a [**PPT**](https://github.com/Benjikuo/Data-structure-visualization/blob/main/Data%20Structure%20Visualization.pptx) about this project  
 
 <p>
@@ -57,13 +59,14 @@ Data structure/
 │                      ├── helpers.js
 │                      └── p5.min.js          # p5.js library
 ├── basic/
-│     └── index.html  
+│     └── index.html
 ├── searching/
-│     └── index.html  
+│     └── index.html
 ├── sorting/
-│     └── index.html  
+│     └── index.html
 ├── tree/
-│     └── index.html  
+│     └── index.html
+├── favicon.ico                               # Website favicon
 ├── index.html                                # Main webpage
 ├── LICENSE                                   # MIT license
 └── README.md                                 # Project documentation
