@@ -70,7 +70,8 @@ Data structure/
 ├── favicon.ico                               # Website favicon
 ├── index.html                                # Main webpage
 ├── LICENSE                                   # MIT license
-└── README.md                                 # Project documentation
+├── README.md                                 # Project documentation
+└── THIRD_PARTY_NOTICES                       # Third-party license notices
 ```
 
 <br>
