@@ -1,4 +1,8 @@
 # Data-structure-visualization
+
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Language](https://img.shields.io/badge/Language-HTML%20%7C%20CSS%20%7C%20JS-blue)
+
 An interactive website for visualizing data structures and algorithms, built with HTML, CSS, JavaScript, and p5.js.  
 
 Visit the website 👇🏻  
