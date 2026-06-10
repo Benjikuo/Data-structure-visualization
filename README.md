@@ -8,7 +8,7 @@ An interactive website for visualizing data structures and algorithms, built wit
 Visit the website 👇🏻  
 [https://benjikuo.github.io/Data-structure-visualization/](https://benjikuo.github.io/Data-structure-visualization/)  
 
-I also include a presentation [**slides**](https://github.com/Benjikuo/Data-structure-visualization/blob/main/Data%20Structure%20Visualization.pdf) about this project  
+This repository also includes persentation [**slides**](https://github.com/Benjikuo/Data-structure-visualization/blob/main/Data%20Structure%20Visualization.pdf) about this project.  
 
 <p>
   <img src="./assets/image/showcase.gif" width="784">
